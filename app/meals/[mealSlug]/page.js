@@ -5,6 +5,10 @@ import { getMeal } from "@/lib/meals";
 const MealDetailsPage = ({ params }) => {
   const meal = getMeal(params.mealSlug);
 
+  if(!meal){
+    notFound();
+  }
+
   // Replace newlines with <br /> safely
   meal.instructions = meal.instructions.replace(/\n/g, "<br />");
 
