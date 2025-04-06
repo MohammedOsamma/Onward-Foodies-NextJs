@@ -5,7 +5,7 @@ import { getMeal } from "@/lib/meals";
 const MealDetailsPage = ({ params }) => {
   const meal = getMeal(params.mealSlug);
 
-  if(!meal){
+  if (!meal) {
     notFound();
   }
 
